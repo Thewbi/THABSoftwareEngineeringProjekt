@@ -1,6 +1,5 @@
 #include <LoadInputFileProcessStep.h>
 
-
 namespace kuka_generator
 {
     LoadInputFileProcessStep::LoadInputFileProcessStep(kuka_generator::ProcessContext& process_context) : process_context_(process_context)
@@ -10,7 +9,6 @@ namespace kuka_generator
 
     void LoadInputFileProcessStep::process()
     {
-
         std::cout << "[LoadInputFileProcessStep] Reading file '" << process_context_.input_file << "'" << std::endl;
 
         // the line reader takes care of the file handling
@@ -19,14 +17,11 @@ namespace kuka_generator
         to_line_file_reader.process();
 
         std::cout << "[LoadInputFileProcessStep] Reading file done!" << std::endl;
-
     }
 
     void LoadInputFileProcessStep::process_line_callback(std::string line)
     {
-        //std::cout << line << std::endl;
-
-        // conver the line to a data row
+        // convert the line to a data row
         kuka_generator::DataRow data_row;
         converter_.convert(line, data_row);
 

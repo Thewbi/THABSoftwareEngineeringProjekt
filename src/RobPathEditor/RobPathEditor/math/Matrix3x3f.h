@@ -23,7 +23,7 @@ namespace kuka_generator
 
     public:
 
-        float data[MATRIX_3X3F_ELEMENT_COUNT] = { 0.0 };
+        float data[MATRIX_3X3F_ELEMENT_COUNT]{ 0.0 };
 
         /// <summary>
         /// The default constructor. This constructor creates the identity matrix

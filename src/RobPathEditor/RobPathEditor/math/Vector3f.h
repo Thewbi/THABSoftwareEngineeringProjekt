@@ -10,9 +10,9 @@ namespace kuka_generator
 
     public:
 
-        float x;
-        float y;
-        float z;
+        float x{ 0.0f };
+        float y{ 0.0f };
+        float z{ 0.0f };
 
         float& operator[](unsigned int i)
         {

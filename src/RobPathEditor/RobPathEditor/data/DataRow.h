@@ -10,8 +10,11 @@ namespace kuka_generator
 {
     class DataRow
     {
+
+    public:
+
         // timestamp, read from the input file
-        long timestamp;
+        long timestamp{ 0 };
 
         // stores the unfiltered position (defined by either the user or read from the input file)
         Vector3f position;
@@ -28,7 +31,7 @@ namespace kuka_generator
         Matrix3x3f orientation_filtered;
 
         // velocity at that point (either defined by the user or computed dynamically given the timestamp and the distance)
-        double velocity;
+        double velocity{ 0.0 };
 
         // if the Douglas-Peucker algorithm decides to delete a point, the point is not actually deleted.
         // The point is kept but it's alive flag is set to false

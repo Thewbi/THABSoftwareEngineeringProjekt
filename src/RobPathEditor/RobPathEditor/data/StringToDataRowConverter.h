@@ -1,6 +1,7 @@
 #pragma once
 
 #include <DataRow.h>
+#include <sstream>
 #include <string>
 
 namespace kuka_generator
