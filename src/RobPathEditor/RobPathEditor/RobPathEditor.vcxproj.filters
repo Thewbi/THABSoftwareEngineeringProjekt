@@ -31,6 +31,12 @@
     <Filter Include="Quelldateien\math">
       <UniqueIdentifier>{0b8a8d37-9bcc-4807-b346-bbe08cff70ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\file_handling">
+      <UniqueIdentifier>{faeaca9e-d550-454c-9280-3c11aee5c948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\file_handling">
+      <UniqueIdentifier>{e513b0f4-f9d3-498f-8b52-33c5257c27a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bitmap_image.h">
@@ -84,6 +90,15 @@
     <ClInclude Include="process\LoadInputFileProcessStep.h">
       <Filter>Headerdateien\process</Filter>
     </ClInclude>
+    <ClInclude Include="file_handling\ToLineFileReader.h">
+      <Filter>Headerdateien\file_handling</Filter>
+    </ClInclude>
+    <ClInclude Include="file_handling\IToLineFileReaderCallback.h">
+      <Filter>Headerdateien\file_handling</Filter>
+    </ClInclude>
+    <ClInclude Include="data\StringToDataRowConverter.h">
+      <Filter>Headerdateien\data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BmpHandler.cpp">
@@ -121,6 +136,12 @@
     </ClCompile>
     <ClCompile Include="process\LoadInputFileProcessStep.cpp">
       <Filter>Quelldateien\process</Filter>
+    </ClCompile>
+    <ClCompile Include="data\StringToDataRowConverter.cpp">
+      <Filter>Quelldateien\data</Filter>
+    </ClCompile>
+    <ClCompile Include="file_handling\ToLineFileReader.cpp">
+      <Filter>Quelldateien\file_handling</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

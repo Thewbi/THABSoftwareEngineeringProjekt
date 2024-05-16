@@ -44,14 +44,18 @@ int new_main()
     std::vector<kuka_generator::IProcessStep*> steps;
 
     // create the LoadInputFileStep and insert it into the vector
-    kuka_generator::LoadInputFileProcessStep load_input_file_process_step;
+    // pass the process context into the constructor
+    kuka_generator::LoadInputFileProcessStep load_input_file_process_step(process_context);
     steps.push_back(&load_input_file_process_step);
 
-    // for-loop over all steps stored in the steps vector and execute each step passing in the process_context
+    // for-loop over all steps stored in the steps vector and execute each step
     for (auto step : steps)
     {
-        step->process(process_context);
+        // run the step. The process context is already supplied when creating the process step variable via the constructor!
+        step->process();
     }
+
+    return 0;
 }
 
 int original_main()

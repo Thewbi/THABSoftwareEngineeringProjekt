@@ -1,7 +1,12 @@
 #pragma once
 
+#include <iostream>
+
 #include <IProcessStep.h>
+#include <IToLineFileReaderCallback.h>
 #include <ProcessContext.h>
+#include <StringToDataRowConverter.h>
+#include <ToLineFileReader.h>
 
 namespace kuka_generator
 {
@@ -13,12 +18,22 @@ namespace kuka_generator
     ///
     /// https://stackoverflow.com/questions/318064/how-do-you-declare-an-interface-in-c
     /// </summary>
-    class LoadInputFileProcessStep : public IProcessStep
+    class LoadInputFileProcessStep : public IProcessStep, public IToLineFileReaderCallback
     {
+
+    private:
+
+        kuka_generator::ProcessContext& process_context_;
+
+        kuka_generator::StringToDataRowConverter converter_;
 
     public:
 
-        void process(ProcessContext& process_context) override;
+        LoadInputFileProcessStep(kuka_generator::ProcessContext& process_context);
+
+        void process() override;
+
+        void process_line_callback(std::string line) override;
 
     };
 }

@@ -11,6 +11,9 @@ namespace kuka_generator
     /// The purpose of this class is it to enforce the existance of the process() method in each ProcessStep variable!
     ///
     /// https://stackoverflow.com/questions/318064/how-do-you-declare-an-interface-in-c
+    ///
+    /// Whenever you add a new folder and filter in the project explorer tree, do not forget to add the
+    /// folder to the VC++ input directories via the project properties!
     /// </summary>
     class IProcessStep
     {
@@ -19,7 +22,7 @@ namespace kuka_generator
 
         virtual ~IProcessStep() {}
 
-        virtual void process(ProcessContext& process_context) = 0;
+        virtual void process() = 0;
 
     };
 }
