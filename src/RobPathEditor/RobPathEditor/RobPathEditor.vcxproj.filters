@@ -13,6 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\data">
+      <UniqueIdentifier>{19847685-be88-466b-8e32-1118cb8b8ef6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\process">
+      <UniqueIdentifier>{574a87c1-bfbf-48da-9c28-0b43bdfc31da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\data">
+      <UniqueIdentifier>{9488c056-a820-4c96-84c6-ce84495c2dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\process">
+      <UniqueIdentifier>{aaf206be-d084-41f2-b48c-edb65a5e7a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\math">
+      <UniqueIdentifier>{a66426fa-d249-410c-be99-5489ad2fd1c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\math">
+      <UniqueIdentifier>{0b8a8d37-9bcc-4807-b346-bbe08cff70ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\file_handling">
+      <UniqueIdentifier>{faeaca9e-d550-454c-9280-3c11aee5c948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\file_handling">
+      <UniqueIdentifier>{e513b0f4-f9d3-498f-8b52-33c5257c27a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bitmap_image.h">
@@ -48,6 +72,33 @@
     <ClInclude Include="Point3D.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="process\ProcessContext.h">
+      <Filter>Headerdateien\process</Filter>
+    </ClInclude>
+    <ClInclude Include="data\DataRow.h">
+      <Filter>Headerdateien\data</Filter>
+    </ClInclude>
+    <ClInclude Include="math\Vector3f.h">
+      <Filter>Headerdateien\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\Matrix3x3f.h">
+      <Filter>Headerdateien\math</Filter>
+    </ClInclude>
+    <ClInclude Include="process\IProcessStep.h">
+      <Filter>Headerdateien\process</Filter>
+    </ClInclude>
+    <ClInclude Include="process\LoadInputFileProcessStep.h">
+      <Filter>Headerdateien\process</Filter>
+    </ClInclude>
+    <ClInclude Include="file_handling\ToLineFileReader.h">
+      <Filter>Headerdateien\file_handling</Filter>
+    </ClInclude>
+    <ClInclude Include="file_handling\IToLineFileReaderCallback.h">
+      <Filter>Headerdateien\file_handling</Filter>
+    </ClInclude>
+    <ClInclude Include="data\StringToDataRowConverter.h">
+      <Filter>Headerdateien\data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BmpHandler.cpp">
@@ -82,6 +133,15 @@
     </ClCompile>
     <ClCompile Include="Point3D.cpp">
       <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="process\LoadInputFileProcessStep.cpp">
+      <Filter>Quelldateien\process</Filter>
+    </ClCompile>
+    <ClCompile Include="data\StringToDataRowConverter.cpp">
+      <Filter>Quelldateien\data</Filter>
+    </ClCompile>
+    <ClCompile Include="file_handling\ToLineFileReader.cpp">
+      <Filter>Quelldateien\file_handling</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

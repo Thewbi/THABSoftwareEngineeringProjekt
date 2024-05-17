@@ -44,6 +44,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\wolfg\Documents\Aschaffenburg\Softwaretechnik\THABSoftwareEngineeringProjekt\src\RobPathEditor\RobPathEditor\file_handling;C:\Users\wolfg\Documents\Aschaffenburg\Softwaretechnik\THABSoftwareEngineeringProjekt\src\RobPathEditor\RobPathEditor\process;C:\Users\wolfg\Documents\Aschaffenburg\Softwaretechnik\THABSoftwareEngineeringProjekt\src\RobPathEditor\RobPathEditor\data;C:\Users\wolfg\Documents\Aschaffenburg\Softwaretechnik\THABSoftwareEngineeringProjekt\src\RobPathEditor\RobPathEditor\math;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -82,24 +83,36 @@
   <ItemGroup>
     <ClInclude Include="bitmap_image.h" />
     <ClInclude Include="BmpHandler.h" />
+    <ClInclude Include="data\DataRow.h" />
+    <ClInclude Include="data\StringToDataRowConverter.h" />
+    <ClInclude Include="file_handling\ToLineFileReader.h" />
+    <ClInclude Include="file_handling\IToLineFileReaderCallback.h" />
     <ClInclude Include="ImgProcessor.h" />
     <ClInclude Include="Line2D.h" />
+    <ClInclude Include="math\Matrix3x3f.h" />
+    <ClInclude Include="math\Vector3f.h" />
     <ClInclude Include="PathBuilder.h" />
     <ClInclude Include="Point2D.h" />
     <ClInclude Include="Point3D.h" />
     <ClInclude Include="PointSequencer.h" />
+    <ClInclude Include="process\IProcessStep.h" />
+    <ClInclude Include="process\LoadInputFileProcessStep.h" />
+    <ClInclude Include="process\ProcessContext.h" />
     <ClInclude Include="RobCodeGenerator.h" />
     <ClInclude Include="SegmentApproximator.h" />
     <ClInclude Include="SegmentSequencer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BmpHandler.cpp" />
+    <ClCompile Include="data\StringToDataRowConverter.cpp" />
+    <ClCompile Include="file_handling\ToLineFileReader.cpp" />
     <ClCompile Include="ImgProcessor.cpp" />
     <ClCompile Include="Line2D.cpp" />
     <ClCompile Include="PathBuilder.cpp" />
     <ClCompile Include="Point2D.cpp" />
     <ClCompile Include="Point3D.cpp" />
     <ClCompile Include="PointSequencer.cpp" />
+    <ClCompile Include="process\LoadInputFileProcessStep.cpp" />
     <ClCompile Include="RobCodeGenerator.cpp" />
     <ClCompile Include="RobPathEditor.cpp" />
     <ClCompile Include="SegmentApproximator.cpp" />
