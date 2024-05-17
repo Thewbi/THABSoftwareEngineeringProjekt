@@ -99,6 +99,9 @@
     <ClInclude Include="data\StringToDataRowConverter.h">
       <Filter>Headerdateien\data</Filter>
     </ClInclude>
+    <ClInclude Include="process\ExampleProcessStep.h">
+      <Filter>Headerdateien\process</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BmpHandler.cpp">
@@ -142,6 +145,9 @@
     </ClCompile>
     <ClCompile Include="file_handling\ToLineFileReader.cpp">
       <Filter>Quelldateien\file_handling</Filter>
+    </ClCompile>
+    <ClCompile Include="process\ExampleProcessStep.cpp">
+      <Filter>Quelldateien\process</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

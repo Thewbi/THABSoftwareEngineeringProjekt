@@ -95,6 +95,7 @@
     <ClInclude Include="Point2D.h" />
     <ClInclude Include="Point3D.h" />
     <ClInclude Include="PointSequencer.h" />
+    <ClInclude Include="process\ExampleProcessStep.h" />
     <ClInclude Include="process\IProcessStep.h" />
     <ClInclude Include="process\LoadInputFileProcessStep.h" />
     <ClInclude Include="process\ProcessContext.h" />
@@ -112,6 +113,7 @@
     <ClCompile Include="Point2D.cpp" />
     <ClCompile Include="Point3D.cpp" />
     <ClCompile Include="PointSequencer.cpp" />
+    <ClCompile Include="process\ExampleProcessStep.cpp" />
     <ClCompile Include="process\LoadInputFileProcessStep.cpp" />
     <ClCompile Include="RobCodeGenerator.cpp" />
     <ClCompile Include="RobPathEditor.cpp" />

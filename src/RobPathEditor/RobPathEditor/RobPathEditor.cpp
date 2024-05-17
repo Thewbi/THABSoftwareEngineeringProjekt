@@ -11,6 +11,7 @@
 #include "SegmentApproximator.h"
 #include "SegmentSequencer.h"
 
+#include <ExampleProcessStep.h>
 #include <IProcessStep.h>
 #include <LoadInputFileProcessStep.h>
 #include <ProcessContext.h>
@@ -45,6 +46,10 @@ int new_main()
     //
     // Create all steps
     //
+
+    // example
+    kuka_generator::ExampleProcessStep example_process_step(process_context);
+    steps.push_back(&example_process_step);
 
     // Step 1 - read user input
     //
