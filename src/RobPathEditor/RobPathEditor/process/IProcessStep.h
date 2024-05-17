@@ -22,6 +22,9 @@ namespace kuka_generator
 
         virtual ~IProcessStep() {}
 
+        /// <summary>
+        /// Start/Run the process
+        /// </summary>
         virtual void process() = 0;
 
     };

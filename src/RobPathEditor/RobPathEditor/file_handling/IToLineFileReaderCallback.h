@@ -19,6 +19,12 @@ namespace kuka_generator
 
         virtual ~IToLineFileReaderCallback() {}
 
+        /// <summary>
+        /// Whenever the ToLine file reader produces a line, it will put the line into this method.
+        /// The line reader does not process the line itself. Infact it does not care what happens
+        /// to the line at all. It's only purpose is to put lines into this method.
+        /// </summary>
+        /// <param name="line">a line read from the input file</param>
         virtual void process_line_callback(std::string line) = 0;
 
     };

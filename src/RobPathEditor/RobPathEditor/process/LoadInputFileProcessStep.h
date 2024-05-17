@@ -23,16 +23,35 @@ namespace kuka_generator
 
     private:
 
+        /// <summary>
+        /// The process context to add data into. Used to indirectly interact with other steps.
+        /// </summary>
         kuka_generator::ProcessContext& process_context_;
 
+        /// <summary>
+        /// This converter is used to convert a line from the input file into a DataRow.
+        /// </summary>
         kuka_generator::StringToDataRowConverter converter_;
 
     public:
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="process_context">The process context</param>
         LoadInputFileProcessStep(kuka_generator::ProcessContext& process_context);
 
+        /// <summary>
+        /// Run this process
+        /// </summary>
         void process() override;
 
+        /// <summary>
+        /// This specific process step implements the IToLineFileReaderCallback interface
+        /// so it can register itself as a callback to the ToLineFileReader because it
+        /// has to convert lines to DataRows.
+        /// </summary>
+        /// <param name="line">The line that was read from the file.</param>
         void process_line_callback(std::string line) override;
 
     };
